@@ -1,0 +1,27 @@
+#%Module -*- tcl -*-
+##
+## modules compilers/gcc4.9.0
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\tcompilers/gcc4.6.2 - sets the Environment for GCC 4.9.0 in my home directory"
+}
+
+module-whatis   "Sets the environment for using gcc4.9.0 compilers (C, Fortran)"
+
+# for Tcl script use only
+set     topdir          /data/uctpfos/local/gcc4.9.0
+set     version         4.9.0
+set     sys             linux86
+
+setenv          CC              $topdir/bin/gcc
+setenv          GCC             $topdir/bin/gcc
+setenv          FC              $topdir/bin/gfortran
+setenv          F77             $topdir/bin/gfortran
+setenv          F90             $topdir/bin/gfortran
+prepend-path    PATH            $topdir/include
+prepend-path    PATH            $topdir/bin
+prepend-path    MANPATH         $topdir/man
+prepend-path    LD_LIBRARY_PATH $topdir/lib64
