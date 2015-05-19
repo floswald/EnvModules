@@ -15,8 +15,8 @@ module load compilers/gcc4.9
 and that takes care of setting all environment variables. here's how:
 
 ```bash
-git clone this
-module use-append this
+git clone https://github.com/floswald/EnvModules
+module use-append ~/git/EnvModules/modulefiles
 module avail   # this should include your custom modules now
                # of course you will have to change the paths
 ```
