@@ -12,7 +12,7 @@ proc ModulesHelp { } {
 module-whatis   "Sets the environment for using gcc4.9.0 compilers (C, Fortran)"
 
 # for Tcl script use only
-set     topdir          /data/uctpfos/local/gcc4.9.0
+set     topdir          /data/uctpfos/local/gcc4.9
 set     version         4.9.0
 set     sys             linux86
 
