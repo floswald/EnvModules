@@ -1,0 +1,25 @@
+#%Module -*- tcl -*-
+##
+## modules pFUnit
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\t pFUnit - sets the Environment for pFUnit my home directory"
+}
+
+module-whatis   "Sets the environment for using pFUnit"
+
+# for Tcl script use only
+
+if ![ is-loaded 'compilers/gcc4.9.0' ] {
+  module load compilers/gcc4.9.0
+  puts "gcc4.9 required. I load that for you:"
+  module list
+}
+
+setenv          F90             gfortran
+setenv          F90_VENDOR      GNU
+setenv          PFUNIT          /data/uctpfos/local/pfunit
+
