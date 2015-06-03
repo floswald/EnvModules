@@ -6,7 +6,7 @@
 proc ModulesHelp { } {
         global version modroot
 
-        puts stderr "\t pFUnit - sets the Environment for pFUnit my home directory\nand loads gcc4.9"
+        puts stderr "\t pFUnit - sets the Environment for pFUnit my home directory\n\t and loads gcc4.9"
 }
 
 module-whatis   "Sets the environment for using pFUnit"
