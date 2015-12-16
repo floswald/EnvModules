@@ -1,0 +1,33 @@
+#%Module -*- tcl -*-
+##
+## modules ucl-cs/ifort13
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\tucl-cs/ifort13 - sets the Environment for Intel Fortran 2013 on UCL CS"
+}
+
+module-whatis   "sets the Environment for Intel Fortran 2013 on UCL CS"
+
+# for Tcl script use only
+set     topdir          /share/apps/intel_ics_2013.0.028
+set     version         2013.0.028
+set     sys             linux86
+
+setenv          FC              $topdir/bin/ifort
+setenv          F77             $topdir/bin/ifort
+setenv          F90             $topdir/bin/ifort
+prepend-path    PATH            $topdir/include
+prepend-path    PATH            $topdir/bin
+prepend-path    MANPATH         $topdir/man
+prepend-path    LD_LIBRARY_PATH $topdir/lib
+prepend-path    LD_LIBRARY_PATH $topdir/composer_xe_2013.1.117/compiler/lib/intel64
+prepend-path    LD_LIBRARY_PATH $topdir
+prepend-path    LD_LIBRARY_PATH /share/apps/openmpi-1.8.1-intel-13.0.1/lib
+prepend-path    LD_LIBRARY_PATH /share/apps/NAG/lib.fll6i24dcl/lib
+
+# other exports
+setenv          NAG_KUSARI_FILE naglm-server.ucl.ac.uk
+setenv          INTEL_LICENSE_FILE 28518@lic-intel.ucl.ac.uk

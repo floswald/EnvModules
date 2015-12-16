@@ -1,0 +1,28 @@
+#%Module -*- tcl -*-
+##
+## modules ucl-cs/gcc5.2
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\tucl-cs/gcc5.2 - sets the Environment for GCC 5.2 on UCL CS"
+}
+
+module-whatis   "sets the Environment for GCC 5.2 on UCL CS compilers (C, Fortran)"
+
+# for Tcl script use only
+set     topdir          /share/apps/gcc-5.2.0
+set     version         5.2.0
+set     sys             linux86
+
+setenv          CC              $topdir/bin/gcc
+setenv          GCC             $topdir/bin/gcc
+setenv          FC              $topdir/bin/gfortran
+setenv          F77             $topdir/bin/gfortran
+setenv          F90             $topdir/bin/gfortran
+prepend-path    PATH            $topdir/include
+prepend-path    PATH            $topdir/bin
+prepend-path    MANPATH         $topdir/man
+prepend-path    LD_LIBRARY_PATH $topdir/lib
+prepend-path    LD_LIBRARY_PATH $topdir/lib64
