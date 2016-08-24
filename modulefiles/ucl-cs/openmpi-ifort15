@@ -1,0 +1,23 @@
+#%Module -*- tcl -*-
+##
+## modules ucl-cs/openmpi-ifort15
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\t"
+}
+
+module-whatis   "sets the Environment for openmpi with Intel Fortran 2015 on UCL CS"
+
+# for Tcl script use only
+set     topdir          /share/apps/openmpi-1.10.0-intel-15.0.1
+set     version         1.10.0
+set     sys             linux86
+
+prepend-path    PATH            $topdir/bin
+prepend-path    LD_LIBRARY_PATH $topdir/lib
+
+# other exports
+setenv          INTEL_LICENSE_FILE 28518@lic-intel.ucl.ac.uk

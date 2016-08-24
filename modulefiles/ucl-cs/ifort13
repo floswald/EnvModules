@@ -12,7 +12,7 @@ proc ModulesHelp { } {
 module-whatis   "sets the Environment for Intel Fortran 2013 on UCL CS"
 
 # for Tcl script use only
-set     topdir          /share/apps/intel_ics_2013.0.028
+set     topdir          /share/apps/composer_xe_2015.1.133
 set     version         2013.0.028
 set     sys             linux86
 

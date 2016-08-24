@@ -1,0 +1,29 @@
+#%Module -*- tcl -*-
+##
+## modules ucl-cs/ifort15
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\tucl-cs/ifort15 - sets the Environment for Intel Fortran 2015 on UCL CS"
+}
+
+module-whatis   "sets the Environment for Intel Fortran 2015 on UCL CS"
+
+# for Tcl script use only
+set     topdir          /share/apps/intel
+set     version         2015.1.133
+set     sys             linux86
+
+setenv          FC              $topdir/bin/ifort
+setenv          F77             $topdir/bin/ifort
+setenv          F90             $topdir/bin/ifort
+prepend-path    PATH            $topdir/include
+prepend-path    PATH            $topdir/bin
+prepend-path    MANPATH         $topdir/man
+prepend-path    LD_LIBRARY_PATH $topdir/lib
+prepend-path    LD_LIBRARY_PATH $topdir/composer_xe_2015.1.133/compiler/lib/intel64
+
+# other exports
+setenv          INTEL_LICENSE_FILE 28518@lic-intel.ucl.ac.uk

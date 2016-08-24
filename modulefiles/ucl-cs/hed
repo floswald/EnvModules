@@ -1,0 +1,19 @@
+#%Module -*- tcl -*-
+##
+## modules hed
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\tucl-cs/ifort13 - sets the Environment for HedonicHousing on UCL CS"
+}
+
+module-whatis   "sets the Environment for HedonicHousing on UCL CS"
+
+module load ucl-cs/ifort15
+module load ucl-cs/openmpi-ifort15
+module load knitro/10.0.1-z
+module load ucl-cs/nag
+module load ucl-cs/java
+

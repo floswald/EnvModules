@@ -1,0 +1,22 @@
+#%Module -*- tcl -*-
+##
+## modules ucl-cs/ifort13
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\tucl-cs/nag"
+}
+
+module-whatis   "sets the Environment for NAG mark 25 libs"
+
+# for Tcl script use only
+set     topdir          /share/apps/NAG
+set     version         mark25
+set     sys             linux86
+
+prepend-path    LD_LIBRARY_PATH /share/apps/NAG/lib/fll6i25dcl/lib
+
+# other exports
+setenv          NAG_KUSARI_FILE 10.1.1.1:
