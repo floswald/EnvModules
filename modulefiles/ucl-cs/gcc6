@@ -1,0 +1,29 @@
+#%Module -*- tcl -*-
+##
+## modules ucl-cs/gcc6
+##
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "\tucl-cs/gcc6 - sets the Environment for GCC 6 on UCL CS"
+}
+
+module-whatis   "sets the Environment for GCC 6 on UCL CS compilers (C, Fortran)"
+
+# for Tcl script use only
+set     topdir          /share/apps/econ/acapp/gcc6
+set     version         6.2.0
+set     sys             linux86
+
+setenv          CC              $topdir/bin/gcc
+setenv          GCC             $topdir/bin/gcc
+setenv          FC              $topdir/bin/gfortran
+setenv          F77             $topdir/bin/gfortran
+setenv          F90             $topdir/bin/gfortran
+prepend-path    PATH            $topdir/include
+prepend-path    PATH            $topdir/bin
+prepend-path    MANPATH         $topdir/man
+prepend-path    LD_LIBRARY_PATH $topdir/lib
+prepend-path    LD_LIBRARY_PATH $topdir/lib64
+prepend-path    LD_LIBRARY_PATH $topdir/libexec
