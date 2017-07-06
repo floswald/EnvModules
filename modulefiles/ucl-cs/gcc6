@@ -12,7 +12,7 @@ proc ModulesHelp { } {
 module-whatis   "sets the Environment for GCC 6 on UCL CS compilers (C, Fortran)"
 
 # for Tcl script use only
-set     topdir          /share/apps/econ/acapp/gcc6
+set     topdir          /share/apps/gcc-6.2.0
 set     version         6.2.0
 set     sys             linux86
 
